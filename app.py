@@ -23,18 +23,16 @@ with st.sidebar:
 
 # Função para chamar a página correspondente
 if selected == "Home":
-    from pages import home
+    from pages.separador import home,model_prediction,about,data_visualization
 
     home.app()
 elif selected == "About":
-    from pages import about
+   from pages.separador import about
+   about.app()
 
-    about.app()
 elif selected == "Data Visualization":
-    from pages import data_visualization
-
+    from pages.separador import data_visualization
     data_visualization.app()
 elif selected == "Model Prediction":
-    from pages import model_prediction
-
+    from pages.separador import model_prediction
     model_prediction.app()

@@ -56,16 +56,20 @@ h1, h2, h3 {
 }
 
 /* Inputs */
-.stNumberInput input {
+.stNumberInput input,
+.stTextInput input,
+.stTextArea textarea {
     border: 2px solid #00d084;
     border-radius: 8px;
     padding: 12px;
     font-size: 16px;
     color: #1d1d1d;
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    background-color: #ffffff; /* Fundo branco */
 }
 
-.stNumberInput input:focus {
+.stNumberInput input:focus,
+.stTextInput input:focus,
+.stTextArea textarea:focus {
     border-color: #00b36d;
     outline: none;
 }
