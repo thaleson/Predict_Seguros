@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 # Função para carregar o CSS
 def load_css():
@@ -8,25 +9,31 @@ def load_css():
 # Carregar o CSS
 load_css()
 
-# Adicionando conteúdo à sidebar
 with st.sidebar:
-    st.header("Navegação")
-    # Criando uma navegação simples com st.radio
-    page = st.radio(
-        "Menu:",
-        ("Home", "About", "Data Visualization", "Model Prediction")
+  
+    
+    # Definindo o menu lateral com estilo
+    selected = option_menu(
+        menu_title="Menu",  
+        options=["Home", "About", "Data Visualization", "Model Prediction"],
+        icons=["house", "info-circle", "bar-chart", "calculator"],
+        menu_icon="cast",
+        default_index=0,
+        orientation="vertical",  # Alinha os itens do menu verticalmente
+     
     )
 
 # Função para chamar a página correspondente
-if page == "Home":
+if selected == "Home":
     from pages import home
     home.app()
-elif page == "About":
+elif selected == "About":
     from pages import about
     about.app()
-elif page == "Data Visualization":
+elif selected == "Data Visualization":
     from pages import data_visualization
     data_visualization.app()
-elif page == "Model Prediction":
+elif selected == "Model Prediction":
     from pages import model_prediction
     model_prediction.app()
+
