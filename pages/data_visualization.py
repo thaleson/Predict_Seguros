@@ -13,11 +13,11 @@ def app():
     st.write("Visualização de amostra dos dados:")
     st.write(data.head())
 
-    # Gráfico de dispersão
-    st.write("Gráfico de dispersão entre características:")
-    feature_x = st.selectbox("Selecione a característica para o eixo X", data.columns)
-    feature_y = st.selectbox("Selecione a característica para o eixo Y", data.columns)
+    # Gráfico de barras
+    st.write("Gráfico de barras da contagem de valores de uma característica:")
+    feature = st.selectbox("Selecione a característica para o gráfico de barras", data.columns)
 
     plt.figure(figsize=(10, 6))
-    sns.scatterplot(data=data, x=feature_x, y=feature_y)
+    sns.countplot(data=data, x=feature)
+    plt.xticks(rotation=45)  # Rotaciona os rótulos do eixo x se necessário
     st.pyplot(plt)
