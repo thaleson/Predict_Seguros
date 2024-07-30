@@ -1,10 +1,12 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+
 # Função para carregar o CSS
 def load_css():
     with open("assets/styles.css") as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 
 # Carregar o CSS
 load_css()
@@ -25,29 +27,20 @@ with st.sidebar:
 
 # Função para chamar a página correspondente
 if selected == "Home":
-<<<<<<< HEAD
-    from pages.separador import home,model_prediction,about,data_visualization
+
+    from pages.separador import home, model_prediction, about, data_visualization
 
     home.app()
 elif selected == "About":
-   from pages.separador import about
-   about.app()
+    from pages.separador import about
+
+    about.app()
 
 elif selected == "Data Visualization":
     from pages.separador import data_visualization
+
     data_visualization.app()
 elif selected == "Model Prediction":
     from pages.separador import model_prediction
-=======
-    from pages import home
-    home.app()
-elif selected == "About":
-    from pages import about
-    about.app()
-elif selected == "Data Visualization":
-    from pages import data_visualization
-    data_visualization.app()
-elif selected == "Model Prediction":
-    from pages import model_prediction
->>>>>>> 9c85668dcca1d3b9a0b7e3d25d46681b601831e9
+
     model_prediction.app()
