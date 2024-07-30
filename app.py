@@ -16,11 +16,7 @@ with st.sidebar:
     # Definindo o menu lateral com estilo
     selected = option_menu(
         menu_title="Menu",  
-        options=["Home", "About", "Data Visualization", "Model Prediction"],
-        icons=["house", "info-circle", "bar-chart", "calculator"],
-        menu_icon="cast",
-        default_index=0,
-        orientation="vertical",  # Alinha os itens do menu verticalmente
+          ('Home', 'About', 'Data Visualization', 'Model Prediction')
      
     )
 
