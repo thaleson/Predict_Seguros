@@ -63,8 +63,13 @@ h1, h2, h3 {
     border-radius: 8px;
     padding: 12px;
     font-size: 16px;
+<<<<<<< HEAD
     color: #1d1d1d;
     background-color: #ffffff; /* Fundo branco */
+=======
+    color: #ff0000; /* Cor vermelha para os números */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+>>>>>>> 9c85668dcca1d3b9a0b7e3d25d46681b601831e9
 }
 
 .stNumberInput input:focus,
