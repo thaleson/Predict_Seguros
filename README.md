@@ -3,6 +3,8 @@
 
 **Predict Seguros** é uma aplicação web desenvolvida com o objetivo de fornecer previsões baseadas em modelos de aprendizado de máquina. O projeto utiliza TensorFlow e Streamlit para criar uma interface interativa e amigável para os usuários.
 
+site : https://predictseguross.streamlit.app/
+
 ## 📦 Funcionalidades
 
 - 📊 **Modelagem de Dados:** Treinamento e uso de modelos de aprendizado de máquina.
