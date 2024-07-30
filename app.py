@@ -11,7 +11,7 @@ load_css()
 
 # Adicionando um título e uma imagem na sidebar
 with st.sidebar:
-    st.image("assets/logo.png", width=150)  # Substitua "logo.png" pelo caminho do seu logotipo
+    st.image("assets/ia.png", width=150)  # Substitua "logo.png" pelo caminho do seu logotipo
     st.markdown("<h1 style='text-align: center;'>Meu Projeto</h1>", unsafe_allow_html=True)
     
     # Definindo o menu lateral com estilo
