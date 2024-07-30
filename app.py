@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 # Função para carregar o CSS
 def load_css():
@@ -8,20 +9,30 @@ def load_css():
 # Carregar o CSS
 load_css()
 
-# Adicionando o nome do app e as rotas na sidebar
+# Definindo o menu lateral no início da sidebar
 with st.sidebar:
-    st.header("Meu Projeto")
-    
-    # Links para as páginas
-    if st.button("Home"):
-        from pages import home
-        home.app()
-    if st.button("About"):
-        from pages import about
-        about.app()
-    if st.button("Data Visualization"):
-        from pages import data_visualization
-        data_visualization.app()
-    if st.button("Model Prediction"):
-        from pages import model_prediction
-        model_prediction.app()
+    st.header("Meu Projeto")  # Título ou nome do projeto
+
+    # Menu de opções
+    selected = option_menu(
+        menu_title="",  # Título do menu vazio para ocupar menos espaço
+        options=["Home", "About", "Data Visualization", "Model Prediction"],
+        icons=["house", "info-circle", "bar-chart", "calculator"],
+        menu_icon="cast",
+        default_index=0,
+        orientation="vertical",
+    )
+
+# Função para chamar a página correspondente
+if selected == "Home":
+    from pages import home
+    home.app()
+elif selected == "About":
+    from pages import about
+    about.app()
+elif selected == "Data Visualization":
+    from pages import data_visualization
+    data_visualization.app()
+elif selected == "Model Prediction":
+    from pages import model_prediction
+    model_prediction.app()
