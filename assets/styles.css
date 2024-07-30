@@ -61,7 +61,7 @@ h1, h2, h3 {
     border-radius: 8px;
     padding: 12px;
     font-size: 16px;
-    color: #1d1d1d;
+    color: #ff0000; /* Cor vermelha para os números */
     background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
 }
 
