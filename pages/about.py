@@ -14,6 +14,7 @@ def app():
     - **Python**
     - **TensorFlow**
     - **Streamlit**
+    - **Rede neurais**
 
     Para mais informações, entre em contato com nossa equipe.
     ''')
