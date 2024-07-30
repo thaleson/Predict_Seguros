@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.Python
+env/
+venv/
+ENV/
+.env
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Other
+.DS_Store
+.coverage
+*.egg-info/
+.tox/
+.nox/
+.mypy_cache/
+.pytest_cache/

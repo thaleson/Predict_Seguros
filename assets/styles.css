@@ -1,0 +1,92 @@
+/* Geral */
+body {
+    background: url('assets/ia.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+h1, h2, h3 {
+    color: #00d084; /* Cor verde futurista */
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.6); /* Efeito de brilho */
+}
+
+/* Sidebar */
+.sidebar .sidebar-content {
+    background-color: rgba(25, 25, 25, 0.8); /* Fundo transparente escuro */
+    color: #ffffff;
+    border-right: 2px solid #00d084;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+}
+
+.sidebar .sidebar-content a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar .sidebar-content a:hover {
+    background-color: #00d084;
+    color: #ffffff;
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+/* Botões */
+.stButton button {
+    background-color: #00d084;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas mais suaves */
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.stButton button:hover {
+    background-color: #00b36d;
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+/* Inputs */
+.stNumberInput input {
+    border: 2px solid #00d084;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    color: #1d1d1d;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+}
+
+.stNumberInput input:focus {
+    border-color: #00b36d;
+    outline: none;
+}
+
+/* Títulos */
+.stTitle {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.6); /* Efeito de brilho */
+}
+
+/* Texto */
+.stText {
+    color: #e0e0e0;
+}
+
+/* Gráficos e tabelas */
+.stPlotlyChart, .stDataFrame {
+    border: 1px solid #00d084;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro transparente */
+}
