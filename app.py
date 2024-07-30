@@ -11,23 +11,17 @@ load_css()
 
 # Adicionando um título e uma imagem na sidebar
 with st.sidebar:
-    st.image("assets/ia.jpg", width=150)  # Substitua "logo.png" pelo caminho do seu logotipo
-    st.markdown("<h1 style='text-align: center;'>Meu Projeto</h1>", unsafe_allow_html=True)
+  
     
     # Definindo o menu lateral com estilo
     selected = option_menu(
-        menu_title=None,  # Título do menu é removido, já que temos um título acima
+        menu_title="Menu",  
         options=["Home", "About", "Data Visualization", "Model Prediction"],
         icons=["house", "info-circle", "bar-chart", "calculator"],
         menu_icon="cast",
         default_index=0,
         orientation="vertical",  # Alinha os itens do menu verticalmente
-        styles={
-            "container": {"padding": "5px", "background-color": "#f5f5f5"},  # Cor de fundo da sidebar
-            "icon": {"color": "black", "font-size": "20px"},  # Cor e tamanho do ícone
-            "nav-link": {"font-size": "18px", "text-align": "left", "margin": "5px"},  # Estilo do texto dos links
-            "nav-link-selected": {"background-color": "#d6d6d6"},  # Cor de fundo do item selecionado
-        }
+     
     )
 
 # Função para chamar a página correspondente
