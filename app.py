@@ -2,6 +2,11 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 
+
+# Configuração da página principal
+st.set_page_config(page_title="CardioPredictor", page_icon="🛡️")
+
+
 # Função para carregar o CSS
 def load_css():
     with open("assets/styles.css") as f:
