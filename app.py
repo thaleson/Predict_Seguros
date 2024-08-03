@@ -43,10 +43,11 @@ elif selected == "Data Visualization":
 elif selected == "Model Prediction":
     from pages.separador import model_prediction
 
-    # Função de previsão com carregamento
+   
+
+    run_prediction()
+     # Função de previsão com carregamento
     def run_prediction():
         with st.spinner("Calculando a previsão..."):
             time.sleep(2)  # Simula o tempo de carregamento
             model_prediction.app()
-
-    run_prediction()
