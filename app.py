@@ -1,17 +1,14 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-
-
+import time  # Importado para simular o carregamento
 
 # Configuração da página principal
 st.set_page_config(page_title="Predictseguros", page_icon="🛡️")
-
 
 # Função para carregar o CSS
 def load_css():
     with open("assets/styles.css") as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
 
 # Carregar o CSS
 load_css()
@@ -32,20 +29,24 @@ with st.sidebar:
 
 # Função para chamar a página correspondente
 if selected == "Home":
-
     from pages.separador import home, model_prediction, about, data_visualization
-
     home.app()
+
 elif selected == "About":
     from pages.separador import about
-
     about.app()
 
 elif selected == "Data Visualization":
     from pages.separador import data_visualization
-
     data_visualization.app()
+
 elif selected == "Model Prediction":
     from pages.separador import model_prediction
 
-    model_prediction.app()
+    # Função de previsão com carregamento
+    def run_prediction():
+        with st.spinner("Calculando a previsão..."):
+            time.sleep(2)  # Simula o tempo de carregamento
+            model_prediction.app()
+
+    run_prediction()
