@@ -37,9 +37,9 @@ def app():
         [value if isinstance(value, (int, float)) else (1 if value == "Sim" else 0) for value in input_data.values()]
     ])
 
-    # Verifica se todos os inputs são zero ou não preenchidos corretamente
+    # Verifica se algum dos valores é zero
     if np.any([v == 0 for v in input_values[0]]):
-        st.error("Por favor, preencha todos os dados corretamente.", icon="🚨", help="Todos os campos são obrigatórios e devem ser preenchidos corretamente.")
+        st.markdown("<p style='color: red; font-size: 18px;'>Por favor, preencha todos os dados corretamente.</p>", unsafe_allow_html=True)
     else:
         # Se todos os inputs estiverem preenchidos corretamente, faz a transformação e previsão
         input_values_scaled = X_scaler.transform(input_values)
