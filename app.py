@@ -29,7 +29,7 @@ with st.sidebar:
 
 # Função para chamar a página correspondente
 if selected == "Home":
-    from pages.separador import home, model_prediction, about, data_visualization
+    from pages.separador import home
     home.app()
 
 elif selected == "About":
@@ -43,11 +43,23 @@ elif selected == "Data Visualization":
 elif selected == "Model Prediction":
     from pages.separador import model_prediction
 
-   
-
-    run_prediction()
-     # Função de previsão com carregamento
-    def run_prediction():
-        with st.spinner("Calculando a previsão..."):
+    # Função de previsão com carregamento
+    def run_prediction(input1, input2, input3):
+        with st.spinner("Calculando a previsão, por favor aguarde..."):
             time.sleep(2)  # Simula o tempo de carregamento
-            model_prediction.app()
+            # Aqui você chamaria a função real de previsão com os inputs fornecidos
+            result = model_prediction.predict(input1, input2, input3)
+            st.success(f"A previsão é: {result}")
+
+    # Interface para a página Model Prediction
+    st.header("Previsão do Modelo")
+    st.info("Preencha os campos abaixo e clique em 'Prever' para realizar a previsão.")
+
+    # Inputs com valores zerados e descrições claras
+    valor1 = st.number_input("Valor de Entrada 1", value=0, help="Insira o valor para a variável 1. Exemplo: 5")
+    valor2 = st.number_input("Valor de Entrada 2", value=0, help="Insira o valor para a variável 2. Exemplo: 10")
+    valor3 = st.number_input("Valor de Entrada 3", value=0, help="Insira o valor para a variável 3. Exemplo: 20")
+
+    # Botão para realizar a previsão
+    if st.button("Prever"):
+        run_prediction(valor1, valor2, valor3)
