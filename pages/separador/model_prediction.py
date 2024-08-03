@@ -33,18 +33,14 @@ def app():
     }
 
     # Transformando os dados de entrada em formato adequado
-    input_values = np.array([
-        [value if isinstance(value, (int, float)) else (1 if value == "Sim" else 0) for value in input_data.values()]
-    ])
+    input_values = np.array([[value if isinstance(value, (int, float)) else (1 if value == "Sim" else 0) for value in input_data.values()]])
+    input_values_scaled = X_scaler.transform(input_values)
 
-    # Verifica se algum dos valores é zero
-    if np.any([v == 0 for v in input_values[0]]):
-        st.markdown("<p style='color: red; font-size: 18px;'>Por favor, preencha todos os dados corretamente.</p>", unsafe_allow_html=True)
-    else:
-        # Se todos os inputs estiverem preenchidos corretamente, faz a transformação e previsão
-        input_values_scaled = X_scaler.transform(input_values)
-
-        if st.button("Prever"):
+    if st.button("Prever"):
+        # Verifica se todos os inputs são zero e exibe uma mensagem de erro se necessário
+        if np.all(input_values == 0):
+            st.error("Por favor, informe os dados corretamente.", icon="🚨")
+        else:
             # Simula o tempo de carregamento
             with st.spinner("Calculando a previsão, por favor aguarde..."):
                 time.sleep(2)  # Simula o tempo de carregamento
