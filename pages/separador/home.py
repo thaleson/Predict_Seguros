@@ -21,7 +21,7 @@ def app():
     st.image('https://modesttipittolseguros.com.br/uploads/images/183-256-orig.jpg?=v1', caption='Imagem de Seguro')
 
     # URL da animação Lottie em JSON
-    lottie_url = 'https://assets9.lottiefiles.com/packages/lf20_J7I1dE.json'
+    lottie_url = 'https://lottiefiles.com/free-animation/laptop-icon-lottie-json-animation-xujxtfROo8'
     lottie_animation = load_lottie_url(lottie_url)
 
     if lottie_animation:
