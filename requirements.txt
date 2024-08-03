@@ -1,4 +1,4 @@
-﻿﻿absl-py
+absl-py
 altair
 astunparse
 attrs
@@ -21,8 +21,8 @@ google-pasta
 grpcio
 h5py
 idna
-importlib_metadata
-importlib_resources
+importlib-metadata
+importlib-resources
 Jinja2
 joblib
 jsonschema
@@ -41,11 +41,11 @@ opt-einsum
 packaging
 pandas
 pillow
-pkgutil_resolve_name
+pkgutil-resolve-name
 protobuf==3.19.4
 pyarrow
 pyasn1
-pyasn1_modules
+pyasn1-modules
 pydeck
 Pygments
 pyparsing
@@ -63,7 +63,7 @@ seaborn
 six
 smmap
 streamlit
-streamlit_lottie 
+streamlit-lottie
 streamlit-option-menu
 tenacity
 tensorboard
@@ -77,7 +77,7 @@ threadpoolctl
 toml
 toolz
 tornado
-typing_extensions
+typing-extensions
 tzdata
 urllib3
 watchdog
